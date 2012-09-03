@@ -1,0 +1,23 @@
+development:
+  adapter: postgresql
+  encoding: unicode
+  database: derp_development
+  pool: 5
+  username: derp
+  password:
+
+test:
+  adapter: postgresql
+  encoding: unicode
+  database: derp_test
+  pool: 5
+  username: derp
+  password:
+
+production:
+  adapter: postgresql
+  encoding: unicode
+  database: derp_production
+  pool: 5
+  username: derp
+  password:
