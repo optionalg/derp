@@ -29,6 +29,8 @@ GEM
       i18n (~> 0.6)
       multi_json (~> 1.0)
     arel (3.0.2)
+    bourne (1.1.2)
+      mocha (= 0.10.5)
     builder (3.0.0)
     columnize (0.3.6)
     debugger (1.2.0)
@@ -42,6 +44,11 @@ GEM
     erubis (2.7.0)
     execjs (1.4.0)
       multi_json (~> 1.0)
+    factory_girl (4.0.0)
+      activesupport (>= 3.0.0)
+    factory_girl_rails (4.0.0)
+      factory_girl (~> 4.0.0)
+      railties (>= 3.0.0)
     haml (3.1.7)
     hike (1.2.1)
     i18n (0.6.1)
@@ -55,7 +62,10 @@ GEM
       i18n (>= 0.4.0)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
+    metaclass (0.0.1)
     mime-types (1.19)
+    mocha (0.10.5)
+      metaclass (~> 0.0.1)
     multi_json (1.3.6)
     pg (0.14.1)
     polyglot (0.3.3)
@@ -125,9 +135,12 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  bourne
   debugger
+  factory_girl_rails
   haml
   jquery-rails
+  mocha
   pg
   rails (= 3.2.8)
   rspec-rails
