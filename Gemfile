@@ -1,35 +1,48 @@
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.8'
+gem 'responders'
+gem 'yajl-ruby'
 
 # Database
 gem 'pg'
 
 # Webserver
-gem 'unicorn'
+gem 'thin'
+
+# Authentication
+gem 'omniauth'
 
 # Front-end
 gem 'jquery-rails'
 gem 'haml'
+gem 'jbuilder'
+gem 'rabl'
 
 group :development, :test do
+  gem 'pry', :require => false
   gem 'debugger'
+  gem 'rspec-rails'
   gem 'sass-rails',   '~> 3.2.3'
   gem 'uglifier', '>= 1.0.3'
+  gem 'listen', '0.4.7'
+  gem 'coolline'
+  gem 'growl'
+  gem 'guard'
+  gem 'guard-rspec'
+  gem 'guard-bundler'
 end
 
 group :test do
-  gem "rspec-rails"
-  gem "mocha"
-  gem "bourne"
-  gem "factory_girl_rails"
+  gem 'capybara'
+  gem 'mocha'
+  gem 'rspec-rails-mocha', :require => false
+  gem 'bourne'
+  gem 'factory_girl_rails'
 end
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
-
-# To use Jbuilder templates for JSON
-# gem 'jbuilder'
 
 # Deploy with Capistrano
 # gem 'capistrano'
