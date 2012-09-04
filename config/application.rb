@@ -2,6 +2,8 @@ require File.expand_path('../boot', __FILE__)
 
 require 'rails/all'
 
+Bundler.require(:default, Rails.env) if defined?(Bundler)
+
 module Derp
   class Application < Rails::Application
     # Custom directories with classes and modules you want to be autoloadable.
@@ -36,7 +38,8 @@ module Derp
     config.generators do |g|
       g.template_engine :haml
       g.test_framework :rspec, :fixture => true, :views => false
-      g.fixture_replacement :factory_girl
+      g.fixture_replacement :factory_girl, :dir => 'spec/factories'
     end
+
   end
 end
