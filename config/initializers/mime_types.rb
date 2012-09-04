@@ -5,3 +5,6 @@
 # Mime::Type.register_alias "text/html", :iphone
 
 Mime::Type.register "application/vnd.derp.api.v1+json", :api_v1
+
+Derp::Application.config.middleware.delete "ActionDispatch::ParamsParser"
+Derp::Application.config.middleware.use ActionDispatch::ParamsParser, { Mime::API_V1 => :json }

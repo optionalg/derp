@@ -1,6 +1,6 @@
 class ProjectsController < ApplicationController
 
-  respond_to :json, :html, :api_v1
+  respond_to :html, :api_v1
 
   def show
     @project = Project.find(params[:id])
@@ -12,4 +12,5 @@ class ProjectsController < ApplicationController
     @project = Project.create(project_params)
     respond_with(@project)
   end
+
 end
