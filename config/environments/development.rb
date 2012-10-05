@@ -18,6 +18,7 @@ Derp::Application.configure do
 
   # Print deprecation notices to the Rails logger
   config.active_support.deprecation = :log
+  config.lograge.enabled = true
 
   # Only use best-standards-support built into browsers
   config.action_dispatch.best_standards_support = :builtin

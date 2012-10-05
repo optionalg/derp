@@ -10,6 +10,9 @@ gem 'pg'
 # Webserver
 gem 'thin'
 
+# Logging
+gem 'lograge'
+
 # Authentication
 gem 'omniauth'
 
@@ -21,7 +24,9 @@ gem 'rabl'
 
 group :development, :test do
   gem 'pry', :require => false
-  gem 'debugger'
+  gem 'pry-doc', :require => false
+  gem 'pry-debugger', :require => false
+  gem 'pry-stack_explorer', :require => false
   gem 'rspec-rails'
   gem 'sass-rails',   '~> 3.2.3'
   gem 'uglifier', '>= 1.0.3'

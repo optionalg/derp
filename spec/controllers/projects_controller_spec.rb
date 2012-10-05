@@ -14,16 +14,11 @@ describe ProjectsController do
     end
 
     context "using the JSON format" do
-      before do
-        project.stubs(:to_json => project_params.to_json)
-      end
-
       it "creates a project with the supplied parameters" do
-        post 'create', 'project' => project_params, :format => :json
+        post 'create', 'project' => project_params
 
-        response.should be_success
+        response.should redirect_to project
         Project.should have_received(:create).with(project_params)
-        JSON.parse(response.body)['name'].should eq 'My Project'
       end
     end
   end
