@@ -22,13 +22,18 @@ gem 'haml'
 gem 'jbuilder'
 gem 'rabl'
 
+group :assets do
+  gem 'sass-rails',   '~> 3.2.3'
+  gem 'compass-rails'
+  gem 'zurb-foundation'
+end
+
 group :development, :test do
   gem 'pry', :require => false
   gem 'pry-doc', :require => false
   gem 'pry-debugger', :require => false
   gem 'pry-stack_explorer', :require => false
   gem 'rspec-rails'
-  gem 'sass-rails',   '~> 3.2.3'
   gem 'uglifier', '>= 1.0.3'
   gem 'listen', '0.4.7'
   gem 'coolline'

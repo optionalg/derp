@@ -33,7 +33,7 @@ module Derp
     # config.active_record.schema_format = :sql
 
     config.active_record.whitelist_attributes = false
-    config.assets.enabled = false
+    config.assets.enabled = true
 
     config.generators do |g|
       g.template_engine :haml
