@@ -1,4 +1,4 @@
-require 'integration/integration_helper'
+require 'integration_helper'
 
 feature "Posting an error" do
   background do

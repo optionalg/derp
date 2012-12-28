@@ -1,4 +1,4 @@
-require 'requests/requests_helper'
+require 'requests_helper'
 
 describe "Creating a project" do
   context "Using API::V1" do
