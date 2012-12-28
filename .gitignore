@@ -17,3 +17,4 @@
 config/database.yml
 .rspec
 config/initializers/pry.rb
+.sass-cache

@@ -6,6 +6,7 @@ gem 'yajl-ruby'
 
 # Database
 gem 'pg'
+gem 'foreigner'
 
 # Webserver
 gem 'thin'
@@ -19,10 +20,12 @@ gem 'omniauth'
 # Front-end
 gem 'jquery-rails'
 gem 'haml'
-gem 'jbuilder'
 gem 'rabl'
 
-group :assets do
+# Temporary
+gem 'faker'
+
+group :assets, :development do
   gem 'sass-rails',   '~> 3.2.3'
   gem 'compass-rails'
   gem 'zurb-foundation'
@@ -50,12 +53,3 @@ group :test do
   gem 'bourne'
   gem 'factory_girl_rails'
 end
-
-# To use ActiveModel has_secure_password
-# gem 'bcrypt-ruby', '~> 3.0.0'
-
-# Deploy with Capistrano
-# gem 'capistrano'
-
-# To use debugger
-# gem 'debugger'

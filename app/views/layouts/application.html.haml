@@ -1,0 +1,19 @@
+!!! 5
+%head
+  %title Derp
+  = stylesheet_link_tag 'application'
+  = javascript_include_tag 'application'
+%body
+  %div.container.top-bar.attached
+    %ul
+      %li.name
+        %h1= link_to "Derp", root_path
+  .row
+    .four.columns
+      %h2 Sidebar
+      - Faker::Lorem.paragraphs.each do |p|
+        = content_tag(:p, p)
+    .eight.columns
+      = yield
+      - Faker::Lorem.paragraphs.each do |p|
+        = content_tag(:p, p)
