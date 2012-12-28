@@ -8,10 +8,14 @@ class ProjectsController < ApplicationController
   end
 
   def create
-    allowed_params = %w{ name }
-    project_params = params[:project].slice(*allowed_params)
     @project = Project.create(project_params)
     respond_with(@project)
+  end
+
+  private
+
+  def project_params
+    params[:project].permit(:name)
   end
 
 end

@@ -22,6 +22,9 @@ gem 'jquery-rails'
 gem 'haml'
 gem 'rabl'
 
+# Authorization etc.
+gem 'strong_parameters'
+
 # Temporary
 gem 'faker'
 

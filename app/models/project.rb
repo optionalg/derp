@@ -1,3 +1,5 @@
 class Project < ActiveRecord::Base
-  attr_accessible :name
+  include ActiveModel::ForbiddenAttributesProtection
+
+  has_many :errors, :inverse_of => :project
 end

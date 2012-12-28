@@ -204,6 +204,10 @@ GEM
       hike (~> 1.2)
       rack (~> 1.0)
       tilt (~> 1.1, != 1.3.0)
+    strong_parameters (0.1.6)
+      actionpack (~> 3.0)
+      activemodel (~> 3.0)
+      railties (~> 3.0)
     thin (1.4.1)
       daemons (>= 1.0.9)
       eventmachine (>= 0.12.6)
@@ -259,6 +263,7 @@ DEPENDENCIES
   rspec-rails
   rspec-rails-mocha
   sass-rails (~> 3.2.3)
+  strong_parameters
   thin
   uglifier (>= 1.0.3)
   yajl-ruby
