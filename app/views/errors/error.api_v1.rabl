@@ -1,0 +1,3 @@
+object @error
+attributes :message
+
