@@ -1,0 +1,65 @@
+1. post an exception
+2. browse an exception
+3. link backtrace to source code
+
+API
+
+<notice> ::= 
+  project-id
+  <notifier>
+  <error>
+  [<request>]
+  [<server-environment>]
+  [<current-user>]
+  <version>
+
+<notifier> ::=
+  name
+  version
+  url
+
+<error> ::=
+  class
+  message
+  <backtrace>
+
+<backtrace> ::=
+  <line>*
+
+<line> ::=
+  file
+  number
+  [method]
+
+<request> ::=
+  url
+  component
+  action
+  <params>
+  <session>
+  <cgi>-data
+
+<params> <session> <cgi-data> ::=
+  <var-list>
+
+<var-list> ::=
+  <var-key>
+  <var-val>
+
+<var-val> ::=
+  <var-list> | <var-key>
+
+var-key ::=
+  string
+
+server-environment ::=
+  project-root
+  environment-name
+  app-version
+  hostname
+
+<current-user> ::=
+  id
+  [name]
+  [email]
+  [username]

@@ -4,6 +4,26 @@
 // Comment out this import if you are customizing you imports below
 @import "foundation";
 
+#top-nav {
+  @extend .container;
+  @extend .top-bar;
+  @extend .attached;
+}
+
+#main {
+  @extend .row;
+}
+
+#sidebar {
+  @extend .four;
+  @extend .columns;
+}
+
+#content {
+  @extend .eight;
+  @extend .columns;
+}
+
 // ----------------------------------------
 // Import specific parts of Foundation by commenting the import "foundation"
 // and uncommenting what you want below. You must uncomment the following if customizing

@@ -21,5 +21,20 @@ describe "Creating a project" do
         Project.where(:name => 'My Project').should exist
       end
     end
+
+    describe "GET '/projects'" do
+      it "shows the project's name" do
+        project = FactoryGirl.create(:project, :name => "My Project")
+        FactoryGirl.create(:error, :project => project, :message => "wah")
+
+        get "/projects/#{project.id}", {}, api_headers
+        project_response = JSON.parse(response.body)
+
+        response.should be_success
+        project_response['project']['name'].should eq 'My Project'
+        error = project_response['project']['errors'].first
+        error['error']['message'].should eq 'wah'
+      end
+    end
   end
 end

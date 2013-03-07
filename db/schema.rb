@@ -11,11 +11,18 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121228220147) do
+ActiveRecord::Schema.define(:version => 20130112203558) do
+
+  create_table "alerts", :force => true do |t|
+    t.integer  "project_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "errors", :force => true do |t|
     t.string  "message",    :default => "", :null => false
     t.integer "project_id",                 :null => false
+    t.integer "alert_id"
   end
 
   create_table "projects", :force => true do |t|
@@ -24,6 +31,9 @@ ActiveRecord::Schema.define(:version => 20121228220147) do
     t.datetime "updated_at", :null => false
   end
 
+  add_foreign_key "alerts", "projects", :name => "alerts_project_id_fk", :dependent => :delete
+
+  add_foreign_key "errors", "alerts", :name => "errors_alert_id_fk", :dependent => :delete
   add_foreign_key "errors", "projects", :name => "errors_project_id_fk", :dependent => :delete
 
 end

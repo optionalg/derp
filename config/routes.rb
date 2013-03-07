@@ -1,9 +1,9 @@
 Derp::Application.routes.draw do
   root :to => 'dashboard#index'
 
-  resources :projects do
-    resources :errors, :only => [:index, :create]
+  resources :projects, :only => [:show, :create] do
+    resources :alerts, :only => [:index]
   end
 
-  resources :errors
+  resources :alerts, :only => [:create, :show]
 end

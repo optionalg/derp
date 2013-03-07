@@ -1,1 +1,3 @@
 %h1 This is the dashboard
+- Faker::Lorem.paragraphs.each do |p|
+  = content_tag(:p, p)

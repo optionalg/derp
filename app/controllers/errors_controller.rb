@@ -1,4 +1,4 @@
-class ErrorsController < ActionController::Base
+class ErrorsController < ApplicationController
 
   respond_to :api_v1
 

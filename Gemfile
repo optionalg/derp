@@ -21,6 +21,7 @@ gem 'omniauth'
 gem 'jquery-rails'
 gem 'haml'
 gem 'rabl'
+gem 'will_paginate'
 
 # Authorization etc.
 gem 'strong_parameters'
